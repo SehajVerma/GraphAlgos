@@ -1,5 +1,7 @@
 https://practice.geeksforgeeks.org/problems/minimum-cost-path/0
 
+for 4 sides use dfs only
+
 #include <bits/stdc++.h>
 using namespace std;
 int grid[1000][1000];
