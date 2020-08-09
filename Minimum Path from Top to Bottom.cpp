@@ -43,11 +43,11 @@ int dijkastra(int n,int m)
                int desty = y+dy[i];
                if(dist[destx][desty] > (grid[destx][desty] + nodeDist))
                {
-                   dist[destx][desty] = grid[destx][desty] + nodeDist;
-                   auto f = s.find({grid[destx][desty],{destx,desty}});
+                   auto f = s.find({dist[destx][desty],{destx,desty}});
                    if(f!=s.end())
                    s.erase(f);
-                   
+		       
+                   dist[destx][desty] = grid[destx][desty] + nodeDist;
                    s.insert({dist[destx][desty],{destx,desty}});
                }
             }
